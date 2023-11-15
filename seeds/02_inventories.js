@@ -13,7 +13,7 @@ exports.seed = async function (knex) {
             colour: "white",
             category: "primary",
             status: "In Stock",
-            quantity: 50,
+            quantity: 53,
         },
         {
             id: 2,

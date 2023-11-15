@@ -4,8 +4,8 @@
  */
 exports.seed = async function (knex) {
     // Deletes ALL existing entries
-    await knex("warehouses").del();
-    await knex("warehouses").insert([
+    await knex("stores").del();
+    await knex("stores").insert([
         {
             id: 1,
             store_name: "Build a Bouq",
