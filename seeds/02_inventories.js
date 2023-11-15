@@ -1,0 +1,128 @@
+/**
+ * @param { import("knex").Knex } knex
+ * @returns { Promise<void> }
+ */
+exports.seed = async function (knex) {
+    // Deletes ALL existing entries
+    await knex("inventories").del();
+    await knex("inventories").insert([
+        {
+            id: 1,
+            store_id: 1,
+            item_name: "Lillies",
+            colour: "white",
+            category: "primary",
+            status: "In Stock",
+            quantity: 50,
+        },
+        {
+            id: 2,
+            store_id: 1,
+            item_name: "Roses",
+            colour: "red",
+            category: "primary",
+            status: "Out of Stock",
+            quantity: 0,
+        },
+        {
+            id: 3,
+            store_id: 1,
+            item_name: "Roses",
+            colour: "white",
+            category: "primary",
+            status: "In Stock",
+            quantity: 10,
+        },
+        {
+            id: 4,
+            store_id: 1,
+            item_name: "Carnations",
+            colour: "pink",
+            category: "primary",
+            status: "In Stock",
+            quantity: 20,
+        },
+        {
+            id: 5,
+            store_id: 1,
+            item_name: "Hydrangeas ",
+            colour: "purple",
+            category: "primary",
+            status: "In Stock",
+            quantity: 7,
+        },
+        {
+            id: 6,
+            store_id: 1,
+            item_name: "Lilacs",
+            colour: "purple",
+            category: "primary",
+            status: "In Stock",
+            quantity: 10,
+        },
+        {
+            id: 7,
+            store_id: 1,
+            item_name: "Peonies",
+            colour: "pink",
+            category: "primary",
+            status: "In Stock",
+            quantity: 8,
+        },
+        {
+            id: 8,
+            store_id: 1,
+            item_name: "Peonies",
+            colour: "red",
+            category: "primary",
+            status: "In Stock",
+            quantity: 2,
+        },
+        {
+            id: 9,
+            store_id: 1,
+            item_name: "Peonies",
+            colour: "white",
+            category: "primary",
+            status: "In Stock",
+            quantity: 1,
+        },
+        {
+            id: 10,
+            store_id: 1,
+            item_name: "Sunflowers",
+            colour: "yellow",
+            category: "primary",
+            status: "In Stock",
+            quantity: 2,
+        },
+
+        {
+            id: 11,
+            store_id: 1,
+            item_name: "Eucalyptus",
+            colour: "green",
+            category: "foliage",
+            status: "In Stock",
+            quantity: 12,
+        },
+        {
+            id: 12,
+            store_id: 1,
+            item_name: "Fern",
+            colour: "green",
+            category: "foliage",
+            status: "In Stock",
+            quantity: 10,
+        },
+        {
+            id: 13,
+            store_id: 1,
+            item_name: "Myrtle",
+            colour: "green",
+            category: "foliage",
+            status: "In Stock",
+            quantity: 8,
+        },
+    ]);
+};
