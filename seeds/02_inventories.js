@@ -18,7 +18,7 @@ exports.seed = async function (knex) {
         {
             id: 2,
             store_id: 1,
-            item_name: "Roses",
+            item_name: "Roses - Red",
             colour: "red",
             category: "primary",
             status: "Out of Stock",
@@ -27,7 +27,7 @@ exports.seed = async function (knex) {
         {
             id: 3,
             store_id: 1,
-            item_name: "Roses",
+            item_name: "Roses - White",
             colour: "white",
             category: "primary",
             status: "In Stock",
@@ -63,7 +63,7 @@ exports.seed = async function (knex) {
         {
             id: 7,
             store_id: 1,
-            item_name: "Peonies",
+            item_name: "Peonies - Pink",
             colour: "pink",
             category: "primary",
             status: "In Stock",
@@ -72,7 +72,7 @@ exports.seed = async function (knex) {
         {
             id: 8,
             store_id: 1,
-            item_name: "Peonies",
+            item_name: "Peonies - Red",
             colour: "red",
             category: "primary",
             status: "In Stock",
@@ -81,7 +81,7 @@ exports.seed = async function (knex) {
         {
             id: 9,
             store_id: 1,
-            item_name: "Peonies",
+            item_name: "Peonies - White",
             colour: "white",
             category: "primary",
             status: "In Stock",

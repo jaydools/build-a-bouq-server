@@ -2,6 +2,14 @@ const express = require("express");
 const router = express.Router();
 const knex = require("knex")(require("../knexfile"));
 
+router.get("/", async (req, res) => {
+    const allInventories = await knex("inventories");
+    if (!allInventories.length) {
+        return res.status(404).json({ message: `No inventories found` });
+    }
+    return res.status(200).json(allInventories);
+});
+
 router.get("/:id", async (req, res) => {
     const itemToUpdate = await knex("inventories").where({ id: req.params.id });
     if (!itemToUpdate.length) {
