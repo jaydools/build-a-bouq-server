@@ -14,12 +14,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 53,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Lillies/kxji6qgkb9hzefwcxrhn",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Lillies/pninvalmy2knefw09kcc",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Lillies/ipsjwbqkzfg1kxh1rxmu",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Lillies/zvyvzbd4ocql7etgfulk",
-            ],
         },
         {
             id: 2,
@@ -29,11 +23,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "Out of Stock",
             quantity: 0,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/red/rrb2bgkmncsmn57mtlvz",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/red/pkoe7japihqc4vegbgob",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/red/tihl0rlddx3mnjp5lozl",
-            ],
         },
         {
             id: 3,
@@ -43,11 +32,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 10,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/white/mg8m7ulkeyhbitynxs1f",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/white/fs7wraf6oxzzzzgdma7d",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/white/hq8oysezee7c2sisbw3q",
-            ],
         },
         {
             id: 4,
@@ -57,12 +41,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 20,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Carnations/ccgkxvxjxa53yyfhyvsq",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Carnations/bt4ynwiavebrzmyv7mae",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Carnations/x5tenbs9r7avywllrr8p",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Carnations/exhe8dewqgw8rrzq8bah",
-            ],
         },
         {
             id: 5,
@@ -72,11 +50,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 7,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Hydrangeas/zn3flaalctggqtbi1ym9",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Hydrangeas/il6bs4lfhgsi5alz40ai",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Hydrangeas/jxng42zaqoxfumrhbbsp",
-            ],
         },
         {
             id: 6,
@@ -86,11 +59,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 10,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/lilacs/nw207yqxpju5fkwp4blk",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/lilacs/nxjz95bsegvshzmrtfcq",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/lilacs/jqyktcbsmnxcgqqlqfxn",
-            ],
         },
         {
             id: 7,
@@ -100,12 +68,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 8,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/pink/xtzotf1oig3oybyh8ugi",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/pink/zv14lc307cxnzdxtpgg1",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/pink/mkiq0igw0k6upjuw2nxc",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Roses/pink/v5cdwzbmrxtek75pq3ao",
-            ],
         },
         {
             id: 8,
@@ -115,11 +77,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 2,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Peonies/ilh0dqstwwu4ksgi5ddx",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Peonies/b8ty4agozxfkxawvrsam",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Peonies/hz9vvqwn27l2yfawrxad",
-            ],
         },
         {
             id: 9,
@@ -138,10 +95,6 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 2,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Sunflowers/epd3rjxfvuxor879cpzt",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Sunflowers/lghepfl8meo3x7kgyjxf",
-            ],
         },
 
         {
@@ -152,11 +105,6 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 12,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Eucalyptus/wikivauifnjiykf8ivsx",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Eucalyptus/gfr8zgdl8rkjb6rlq5un",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Eucalyptus/rzqr8y75qbkpmmssrppi",
-            ],
         },
         {
             id: 12,
@@ -166,11 +114,6 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 10,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Fern/sb5mpg1paysaomakzmlb",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Fern/npkjjbxqz5tamqjblloj",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Fern/t2xrzzir7ixkkegczjyg",
-            ],
         },
         {
             id: 13,
@@ -180,11 +123,6 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 8,
-            images: [
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/myrtle/uxu82dxudyxcobqq1dup",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/myrtle/ewsizcbzudisd4i63glb",
-                "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/myrtle/o6wsq3rdpbl2jzyf6kq3",
-            ],
         },
         {
             id: 14,
@@ -194,7 +132,6 @@ exports.seed = async function (knex) {
             category: "container",
             status: "In Stock",
             quantity: 3,
-            imag: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/lxfrkyeui2bm9xahfgse",
         },
         {
             id: 15,
@@ -204,7 +141,6 @@ exports.seed = async function (knex) {
             category: "container",
             status: "In Stock",
             quantity: 18,
-            image: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/zrnxdymrda2bb1zuwh4q",
         },
     ]);
 };
