@@ -3,11 +3,31 @@ const router = express.Router();
 const knex = require("knex")(require("../knexfile"));
 
 router.get("/", async (req, res) => {
-    const allInventories = await knex("inventories");
-    if (!allInventories.length) {
-        return res.status(404).json({ message: `No inventories found` });
+    try {
+        // Fetch all inventories
+        const allInventories = await knex("inventories");
+        if (!allInventories.length) {
+            return res.status(404).json({ message: `No inventories found` });
+        }
+
+        // Array to store the inventory items with images
+        let inventoriesWithImages = [];
+
+        // Loop through each inventory item and fetch its images
+        for (const item of allInventories) {
+            const images = await knex("images").where({ item_id: item.id }).select("url");
+
+            const imageUrls = images.map((img) => img.url);
+
+            // Combine inventory details with image URLs
+            inventoriesWithImages.push({ ...item, images: imageUrls });
+        }
+
+        return res.status(200).json(inventoriesWithImages);
+    } catch (error) {
+        console.error("Error fetching inventories with images: ", error);
+        res.status(500).json({ message: "Internal server error" });
     }
-    return res.status(200).json(allInventories);
 });
 
 router.get("/:id", async (req, res) => {
