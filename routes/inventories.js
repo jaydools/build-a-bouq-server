@@ -11,17 +11,30 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
-    const itemToUpdate = await knex("inventories").where({ id: req.params.id });
+    const itemId = req.params.id;
+    const itemToUpdate = await knex("inventories").where({ id: itemId });
+
     if (!itemToUpdate.length) {
-        return res.status(404).json({ message: `No item was found with the id ${req.params.id}` });
+        return res.status(404).json({ message: `No item was found with the id ${itemId}` });
     }
 
+    // Retrieve the item details along with the store details
     const inventoryJoin = await knex("stores")
         .join("inventories", "inventories.store_id", "stores.id")
-        .where({ "inventories.id": req.params.id })
+        .where({ "inventories.id": itemId })
         .select("item_name", "colour", "category", "status", "quantity", "store_id", "store_name");
 
-    return res.status(200).json(inventoryJoin[0]);
+    if (!inventoryJoin) {
+        return res.status(404).json({ message: `No item details found for id ${itemId}` });
+    }
+
+    // Retrieve the image URLs associated with this item
+    const imageUrls = await knex("images").where({ item_id: itemId }).select("url");
+
+    // Combine the inventory details with image URLs
+    const imagePull = { ...inventoryJoin, images: imageUrls.map((img) => img.url) };
+
+    return res.status(200).json(imagePull);
 });
 
 router.put("/:id", async (req, res) => {
