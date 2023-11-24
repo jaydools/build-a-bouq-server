@@ -14,6 +14,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 53,
+            price: 20,
         },
         {
             id: 2,
@@ -23,6 +24,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "Out of Stock",
             quantity: 3,
+            price: 25,
         },
         {
             id: 3,
@@ -32,6 +34,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 10,
+            price: 25,
         },
         {
             id: 4,
@@ -41,6 +44,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 20,
+            price: 25,
         },
         {
             id: 5,
@@ -50,6 +54,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 7,
+            price: 15,
         },
         {
             id: 6,
@@ -59,6 +64,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 10,
+            price: 12,
         },
         {
             id: 7,
@@ -68,6 +74,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 8,
+            price: 25,
         },
         {
             id: 8,
@@ -77,6 +84,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 2,
+            price: 15,
         },
         {
             id: 9,
@@ -86,6 +94,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 1,
+            price: 15,
         },
         {
             id: 10,
@@ -95,6 +104,7 @@ exports.seed = async function (knex) {
             category: "primary",
             status: "In Stock",
             quantity: 2,
+            price: 30,
         },
 
         {
@@ -105,6 +115,7 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 12,
+            price: 10,
         },
         {
             id: 12,
@@ -114,6 +125,7 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 10,
+            price: 7,
         },
         {
             id: 13,
@@ -123,6 +135,7 @@ exports.seed = async function (knex) {
             category: "foliage",
             status: "In Stock",
             quantity: 8,
+            price: 12,
         },
         {
             id: 14,
@@ -132,6 +145,7 @@ exports.seed = async function (knex) {
             category: "container",
             status: "In Stock",
             quantity: 3,
+            price: 17,
         },
         {
             id: 15,
@@ -141,6 +155,7 @@ exports.seed = async function (knex) {
             category: "container",
             status: "In Stock",
             quantity: 18,
+            price: 2,
         },
     ]);
 };
