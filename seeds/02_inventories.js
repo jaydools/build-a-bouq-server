@@ -22,7 +22,7 @@ exports.seed = async function (knex) {
             colour: "red",
             category: "primary",
             status: "Out of Stock",
-            quantity: 0,
+            quantity: 3,
         },
         {
             id: 3,

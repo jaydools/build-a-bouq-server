@@ -16,6 +16,7 @@ exports.up = function (knex) {
         table.string("category").notNullable();
         table.string("status").notNullable();
         table.integer("quantity").notNullable();
+        table.integer("price").notNullable();
         table.timestamp("created_at").defaultTo(knex.fn.now());
         table
             .timestamp("updated_at")
