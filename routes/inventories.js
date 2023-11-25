@@ -2,6 +2,22 @@ const express = require("express");
 const router = express.Router();
 const knex = require("knex")(require("../knexfile"));
 const cors = require("cors");
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+
+router.post("/create-payment-intent", async (req, res) => {
+    try {
+        const paymentIntent = await stripe.paymentIntents.create({
+            amount: req.body.amount,
+            currency: "cad",
+        });
+
+        res.send({
+            clientSecret: paymentIntent.client_secret,
+        });
+    } catch (error) {
+        res.status(500).send({ error: error.message });
+    }
+});
 
 router.get("/", async (req, res) => {
     const apiKey = req.query.apiKey;
