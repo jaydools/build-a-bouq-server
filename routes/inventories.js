@@ -1,8 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const knex = require("knex")(require("../knexfile"));
+const cors = require("cors");
 
 router.get("/", async (req, res) => {
+    const apiKey = req.query.apiKey;
+
+    if (req.query.apiKey !== process.env.MOCK_API_KEY) {
+        return res.status(401).send("Unauthorized");
+    }
+
     try {
         // Fetch all inventories
         const allInventories = await knex("inventories");
@@ -31,8 +38,13 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/:id", async (req, res) => {
+    const apiKey = req.query.apiKey;
     const itemId = req.params.id;
     const itemToUpdate = await knex("inventories").where({ id: itemId });
+
+    if (req.query.apiKey !== process.env.MOCK_API_KEY) {
+        return res.status(401).send("Unauthorized");
+    }
 
     if (!itemToUpdate.length) {
         return res.status(404).json({ message: `No item was found with the id ${itemId}` });
@@ -59,6 +71,12 @@ router.get("/:id", async (req, res) => {
 
 router.put("/:id", async (req, res) => {
     const itemToUpdate = await knex("inventories").where({ id: req.params.id });
+    const apiKey = req.query.apiKey;
+
+    if (req.query.apiKey !== process.env.MOCK_API_KEY) {
+        return res.status(401).send("Unauthorized");
+    }
+
     if (!itemToUpdate.length) {
         return res.status(404).json({ message: `No item was found with the id ${req.params.id}` });
     }
