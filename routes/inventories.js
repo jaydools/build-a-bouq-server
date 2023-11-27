@@ -11,22 +11,18 @@ router.get("/", async (req, res) => {
     }
 
     try {
-        // Fetch all inventories
         const allInventories = await knex("inventories");
         if (!allInventories.length) {
             return res.status(404).json({ message: `No inventories found` });
         }
 
-        // Array to store the inventory items with images
         let inventoriesWithImages = [];
 
-        // Loop through each inventory item and fetch its images
         for (const item of allInventories) {
             const images = await knex("images").where({ item_id: item.id }).select("url");
 
             const imageUrls = images.map((img) => img.url);
 
-            // Combine inventory details with image URLs
             inventoriesWithImages.push({ ...item, images: imageUrls });
         }
 
@@ -50,7 +46,6 @@ router.get("/:id", async (req, res) => {
         return res.status(404).json({ message: `No item was found with the id ${itemId}` });
     }
 
-    // Retrieve the item details along with the store details
     const inventoryJoin = await knex("stores")
         .join("inventories", "inventories.store_id", "stores.id")
         .where({ "inventories.id": itemId })
@@ -60,10 +55,8 @@ router.get("/:id", async (req, res) => {
         return res.status(404).json({ message: `No item details found for id ${itemId}` });
     }
 
-    // Retrieve the image URLs associated with this item
     const imageUrls = await knex("images").where({ item_id: itemId }).select("url");
 
-    // Combine the inventory details with image URLs
     const imagePull = { ...inventoryJoin, images: imageUrls.map((img) => img.url) };
 
     return res.status(200).json(imagePull);
