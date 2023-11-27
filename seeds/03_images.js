@@ -199,12 +199,12 @@ exports.seed = async function (knex) {
         {
             id: 39,
             item_id: 14,
-            url: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/lxfrkyeui2bm9xahfgse",
+            url: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/ogrktrmh6heoxvhzswru",
         },
         {
             id: 40,
             item_id: 15,
-            url: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/zrnxdymrda2bb1zuwh4q",
+            url: "https://res.cloudinary.com/dxay0tp2l/image/upload/f_auto,q_auto/v1/build-a-bouq/Container/kn1t9tt3nf1w0efl0pmb",
         },
     ]);
 };
