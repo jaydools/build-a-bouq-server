@@ -22,8 +22,8 @@ PORT=8080
 FRONTEND_URL=http://localhost:3000
 DB_HOST=127.0.0.1
 DB_NAME=Build-a-Bouqet
-DB_USER=root
-DB_PASSWORD=rootroot
+DB_USER=<user>
+DB_PASSWORD=<password>
 MOCK_API_KEY=1234-ABCD
 STRIPE_SECRET_KEY=your_stripe_secret_key (this is to me implimented in the next sprint)
 
