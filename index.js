@@ -11,5 +11,5 @@ app.use(express.json());
 app.use("/api/stores", storeRoute);
 app.use("/api/inventories", inventoriesRoute);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3306;
 app.listen(port, () => console.log(`Listening on port ${port}!`));
